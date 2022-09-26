@@ -1,0 +1,54 @@
+.cards {
+	@include flex;
+	@include mobile-flex;
+	justify-content: center;
+	gap: 12rem;
+	padding: 4rem;
+}
+
+.card {
+	background: var(--color-accent);
+	border-radius: 1.5rem;
+	width: 32%;
+	color: var(--color-primary);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+	&__image {
+		width: 100%;
+	}
+
+	&__content {
+		padding: 2.5rem;
+
+		hr {
+			border-top: 1px solid var(--color-white);
+			margin: 1.5rem 0;
+		}
+	}
+
+	&__title {
+		font-size: var(--fs-regular);
+	}
+
+	&__subtitle {
+		font-size: var(--fs-small);
+		padding: 2rem 0;
+	}
+
+	&__funds {
+		@include flex;
+		@include mobile-flex;
+		justify-content: space-around;
+	}
+
+	&__fund-title,
+	&__fund-text {
+		text-align: center;
+	}
+
+	&__fund-text {
+		font-size: var(--fs-medium);
+		width: 12ch;
+	}
+}

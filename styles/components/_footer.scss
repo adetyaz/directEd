@@ -1,0 +1,23 @@
+.footer {
+	@include flex;
+	@include mobile-flex;
+	justify-content: space-between;
+	background: var(--color-primary);
+	color: var(--color-white);
+	padding: 2rem 3rem 2rem 14rem;
+
+	@media screen and (max-width: 900px) {
+		padding: 2rem 3rem 2rem 8rem;
+	}
+
+	@media screen and (max-width: 600px) {
+		padding: 2rem 3rem 2rem 3rem;
+	}
+
+	&__copyright {
+		& > small {
+			display: block;
+			font-size: var(--fs-small);
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.progressbar-container {
+	color: var(--color-primary);
+	padding: 2rem 0;
+	margin-bottom: 2rem;
+
+	&__head {
+		@include flex;
+		justify-content: space-between;
+
+		& > small {
+			@include flex;
+			gap: 1rem;
+		}
+	}
+
+	& > span {
+		font-size: var(--fs-small);
+	}
+
+	&__bottom {
+		@include flex;
+		justify-content: space-between;
+
+		& > h3 {
+			font-size: var(--fs-regular);
+		}
+	}
+}
+
+.progressbar {
+	height: 1.5rem;
+	background: #d9d9d9;
+	border-radius: 2rem;
+	margin: 1.5rem 0;
+
+	&__level {
+		background: var(--color-primaryAccent);
+		height: 1.5rem;
+		display: block;
+		border-radius: 2rem;
+	}
+}

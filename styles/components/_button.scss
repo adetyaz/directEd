@@ -1,0 +1,26 @@
+.button {
+	background: var(--color-accent);
+	border: none;
+	border-radius: 1rem;
+	font-family: inherit;
+	font-size: var(--fs-regular);
+	font-weight: 800;
+	color: var(--color-primary);
+	padding: 1rem 3rem;
+	text-transform: capitalize;
+	display: block;
+
+	&.primary {
+		background: var(--color-primary);
+		color: var(--color-accent);
+	}
+
+	&.secondary {
+		background: var(--color-primaryAccent);
+		color: var(--color-accent);
+	}
+
+	&.centered {
+		margin-inline: auto;
+	}
+}

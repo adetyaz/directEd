@@ -1,0 +1,21 @@
+.nav {
+	&__items {
+		@include flex;
+		gap: 3rem;
+	}
+
+	&__list {
+		list-style: none;
+	}
+
+	&__link {
+		color: var(--color-white);
+		font-size: var(--fs-regular);
+		text-transform: uppercase;
+		transition: all 1s ease-out;
+
+		&:hover {
+			font-weight: 800;
+		}
+	}
+}

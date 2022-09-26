@@ -1,0 +1,10 @@
+@mixin flex {
+	display: flex;
+	align-items: center;
+}
+
+@mixin mobile-flex {
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+	}
+}
