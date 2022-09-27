@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Header, Footer } from '../../components'
+import { Header } from '../../components'
 
 const ScholarProgress = () => {
 	return (
@@ -16,7 +16,6 @@ const ScholarProgress = () => {
 			<main>
 				<h1>Scholar's Progress</h1>
 			</main>
-			<Footer />
 		</>
 	)
 }

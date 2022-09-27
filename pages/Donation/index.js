@@ -32,6 +32,13 @@ const Donation = ({ router }) => {
 		},
 	]
 
+	/***
+	 *
+	 * We are sending out donation rates to the selected button component,
+	 * which maps out the data allows users to select an option
+	 *
+	 * **/
+
 	const handleChange = (donation) => {
 		setDonatedAmount(donation.amount)
 	}

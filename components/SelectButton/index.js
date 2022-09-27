@@ -8,6 +8,12 @@ const SelectButton = ({ donationRates, onChange }) => {
 		setActive(donation.id)
 	}
 
+	/****
+	 *
+	 * Using the id of the donation rates user can select the specific donation and the data will be sent along
+	 * for confirmation
+	 * **/
+
 	return (
 		<>
 			{donationRates.map((donation) => (
