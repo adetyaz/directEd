@@ -1,6 +1,12 @@
 import ClockIcon from '../../icons/ClockIcon'
 
 const ProgressBar = ({ time, amount, amountLeft, people, progressLevel }) => {
+	/***
+	 * We popuate the progressbara component with data sent as props from the card,
+	 * when there's a change in data, it will be reflected in the progress bar component
+	 *
+	 * */
+
 	return (
 		<div className='progressbar-container'>
 			<div className='progressbar-container__head'>

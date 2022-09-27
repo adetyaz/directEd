@@ -5,8 +5,24 @@ const nextConfig = {
 	async rewrites() {
 		return [
 			{
-				source: '/',
-				destination: '/',
+				source: '/scholarprogress',
+				destination: '/ScholarProgress',
+			},
+			{
+				source: '/transactions',
+				destination: '/Transactions',
+			},
+			{
+				source: '/confirmation',
+				destination: '/Confirmation',
+			},
+			{
+				source: '/donation',
+				destination: '/Donation',
+			},
+			{
+				source: '/thank-you',
+				destination: '/ThankYou',
 			},
 		]
 	},

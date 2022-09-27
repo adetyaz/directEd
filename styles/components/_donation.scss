@@ -1,0 +1,24 @@
+.donation {
+	&__head {
+		@include flex;
+		gap: 20rem;
+		margin: 5rem 0;
+		padding-inline: 4rem;
+
+		@media screen and (max-width: 600px) {
+			gap: 5rem;
+		}
+	}
+
+	&__banner {
+		@include banner;
+	}
+
+	&__options {
+		@include flex;
+		flex-wrap: wrap;
+		gap: 3rem;
+		justify-content: center;
+		margin: 4rem 0;
+	}
+}

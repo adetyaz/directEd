@@ -4,6 +4,9 @@
 	--color-accent: #f3eee2;
 	--color-primary: #395241;
 	--color-primaryAccent: #6b8065;
+	--color-grey: #e6e6e6;
+	--color-grey-2: #949494;
+	--color-grey-3: #2b3035;
 
 	//font-size
 	--fs-small: 1.2rem;
@@ -48,4 +51,21 @@ h1 {
 	font-size: calc(4rem + 1vw);
 	color: var(--color-black);
 	text-align: center;
+}
+
+h2 {
+	font-size: 2rem;
+	color: var(--color-grey-3);
+	text-align: center;
+	margin: 2rem 0;
+}
+
+.previous-page {
+	cursor: pointer;
+	@include flex;
+	gap: 1rem;
+
+	span {
+		font-size: var(--fs-small);
+	}
 }

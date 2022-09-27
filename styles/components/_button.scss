@@ -1,14 +1,13 @@
 .button {
+	@include button;
 	background: var(--color-accent);
-	border: none;
-	border-radius: 1rem;
-	font-family: inherit;
-	font-size: var(--fs-regular);
-	font-weight: 800;
 	color: var(--color-primary);
 	padding: 1rem 3rem;
-	text-transform: capitalize;
-	display: block;
+	transition: all 0.5s ease-in;
+
+	&:hover {
+		transform: translateY(-5px);
+	}
 
 	&.primary {
 		background: var(--color-primary);
@@ -22,5 +21,24 @@
 
 	&.centered {
 		margin-inline: auto;
+	}
+
+	&.disabled {
+		opacity: 0.8;
+		&:hover {
+			transform: translateY(0);
+		}
+	}
+}
+
+.select-button {
+	@include button;
+	background: var(--color-grey);
+	padding: 1.5rem 3rem;
+	color: #949494;
+
+	&.active {
+		background-color: var(--color-primary);
+		color: var(--color-accent);
 	}
 }

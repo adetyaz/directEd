@@ -1,8 +1,21 @@
-import React from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import Button from '../Button'
 import ProgressBar from '../ProgressBar'
 
 const Card = () => {
+	const router = useRouter()
+
+	const donate = (fundTitle) => {
+		router.push(
+			{
+				pathname: '/donation',
+				query: { title: fundTitle },
+			},
+			'/donation'
+		)
+	}
+
 	const cardContent = [
 		{
 			image: '/assets/kagumo-school.png',
@@ -39,6 +52,12 @@ const Card = () => {
 	return (
 		<>
 			{cardContent.map((fund) => (
+				/**
+				 * We map our data array to avoid repetition of elements and it simulates getting data from an api.
+				 *
+				 *  we also send data as props to the progress bar, when there's real time data
+				 * the progress bar will show progress level based on api data
+				 * */
 				<div className='card' key={fund.title}>
 					<img
 						src={fund.image}
@@ -47,7 +66,9 @@ const Card = () => {
 					/>
 					<article className='card__content'>
 						<h3 className='card__title'>{fund.title}</h3>
-						<p className='card__subtitle'>{fund.subtitle}</p>
+						<Link href='https://directed.dev'>
+							<a className='card__link'>Read More</a>
+						</Link>
 						<div className='card__funds'>
 							<div>
 								<h3 className='card__title card__fund-title'>
@@ -70,7 +91,12 @@ const Card = () => {
 							people={fund.people}
 							progressLevel={fund.progressLevel}
 						/>
-						<Button variant='primary' centered>
+
+						<Button
+							variant='primary'
+							centered
+							onClick={() => donate(fund.title)}
+						>
 							donate now
 						</Button>
 					</article>

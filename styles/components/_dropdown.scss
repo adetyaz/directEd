@@ -1,0 +1,30 @@
+.dropdown {
+	background: var(--color-accent);
+	position: absolute;
+	right: 5%;
+	top: 8rem;
+	padding: 2rem 5rem;
+	border-radius: 2rem;
+	color: var(--color-primary);
+
+	&::after {
+		content: '';
+		background: var(--color-accent);
+		height: 3rem;
+		width: 3rem;
+		display: block;
+		border-top-left-radius: 2rem;
+		border-bottom-left-radius: 2rem;
+		border-bottom-right-radius: 2rem;
+		transform: rotate(-10deg);
+		position: relative;
+		top: -17rem;
+		left: 12rem;
+	}
+
+	&__list {
+		font-size: var(--fs-regular);
+		margin: 1rem 0;
+		list-style: none;
+	}
+}

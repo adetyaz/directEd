@@ -13,9 +13,11 @@
 		font-size: var(--fs-regular);
 		text-transform: uppercase;
 		transition: all 1s ease-out;
+		cursor: pointer;
+		display: block;
 
-		&:hover {
-			font-weight: 800;
+		&.active {
+			text-decoration: underline;
 		}
 	}
 }
