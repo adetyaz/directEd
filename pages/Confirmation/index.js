@@ -14,7 +14,7 @@ const Confirmation = () => {
 	 * */
 
 	const toggleButtonState = () => setButtonProcessingState(true)
-	const confirmPayment = () => router.push('thank-you')
+	const confirmPayment = () => router.push('/thank-you')
 
 	return (
 		<>
