@@ -26,7 +26,11 @@ const ScholarCardItem = ({ studentData }) => {
 				<div className='scholar-card__content' key={student.id}>
 					<div className='scholar-card__student'>
 						<div className='scholar-card__student--info'>
-							<img src={student.image} className='scholar-card__image' />
+							<img
+								src={student.image}
+								alt='student image'
+								className='scholar-card__image'
+							/>
 							<p>{student.name}</p>
 						</div>
 						<MilestoneProgressBar

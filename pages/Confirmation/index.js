@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { ConfirmationCard, Footer, Header } from '../../components'
 import Button from '../../components/Button'
+import { DATA } from '../../lib/confirmationData/data'
 
 const Confirmation = () => {
 	const router = useRouter()
@@ -14,7 +15,49 @@ const Confirmation = () => {
 	 * */
 
 	const toggleButtonState = () => setButtonProcessingState(true)
-	const confirmPayment = () => router.push('/thank-you')
+	const confirmPayment = async () => {
+		router.push(
+			'/thank-you'
+			/***
+			 * router.push allows us to send data along as a query to the next page, we can conditionally assert that the page should
+			 * only be redirect after success, the should hold some data like the user email.
+			 *
+			 * On the thank you page, the email being sent logic will submit it to and send to email.
+			 *
+			 * This logic can vary in use especially when using a state management tool
+			 *
+			 * **/
+		)
+
+		/***
+		 * Simulating the logic to send a receipt to the users
+		 *
+		 * I imagine data will the data will be generated and
+		 * sent to the page similar to the way it has been sent to confirmation card
+		 *
+		 *
+		 * /Using fetch, we could also use axios/
+		 * const config = {
+		 *  method: 'POST',
+		 *
+		 *  headers: {
+		 * 		Content-Type: 'application/json',
+		 * 		Authorization: apiKey
+		 * 	},
+		 *
+		 *  body: JSON.stringify(DATA)
+		 *
+		 * }
+		 *
+		 *  const response = await fetch('ROOT_URL', config)
+		 * 	const result = await response.json()
+		 *
+		 *  return result.data
+		 *	/Note that the return value will be dependent on how we want the return data to be./
+		 *
+		 *
+		 * */
+	}
 
 	return (
 		<>
@@ -26,7 +69,7 @@ const Confirmation = () => {
 			<Header buttonText='$directEd' />
 			<main>
 				<h1>Confirmation</h1>
-				<ConfirmationCard />
+				<ConfirmationCard data={DATA} />
 				<Button
 					variant='primary'
 					centered

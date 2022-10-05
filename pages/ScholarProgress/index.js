@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Header, Footer, ScholarCard } from '../../components'
-import { DATA } from './data'
+import { DATA } from '../../lib/studentData/data'
 import React from 'react'
 
 const ScholarProgress = () => {

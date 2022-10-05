@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Card, Footer, Header, Modal } from '../components'
 import Dialog from '../components/Dialog'
 
@@ -8,6 +8,11 @@ export default function Home() {
 	const openModal = () => modalRef.current.openModal()
 
 	useEffect(() => {
+		/***
+		 *
+		 * In the normal use case when can use the user seesion to verify if they have seen the dialog before, then it pops up when we haven't
+		 *
+		 * **/
 		openModal()
 	}, [])
 
