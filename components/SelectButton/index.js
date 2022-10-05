@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 const SelectButton = ({ donationRates, onChange }) => {
 	const [active, setActive] = useState(0)

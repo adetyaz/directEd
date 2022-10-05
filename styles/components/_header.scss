@@ -4,6 +4,13 @@
 	background: var(--color-primary);
 	padding: 2rem 6rem 2rem 13rem;
 	position: relative;
+	@media screen and (max-width: 900px) {
+		padding: 2rem 5rem 2rem 5rem;
+	}
+
+	& > div {
+		position: relative;
+	}
 
 	@media screen and (max-width: 900px) {
 		padding: 2rem 3rem 2rem 8rem;

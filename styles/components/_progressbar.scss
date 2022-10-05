@@ -40,3 +40,43 @@
 		border-radius: 2rem;
 	}
 }
+
+.milestone-wrapper {
+	background: var(--color-grey-4);
+	height: 1rem;
+	width: 40%;
+	position: relative;
+}
+
+.milestone {
+	&__line {
+		position: absolute;
+		background: var(--color-primary);
+
+		height: 1rem;
+	}
+
+	&__gap {
+		position: absolute;
+		background: var(--color-accent);
+		width: 1.5%;
+		height: 1rem;
+		top: 0;
+
+		&--1 {
+			left: 20%;
+		}
+
+		&--2 {
+			left: 40%;
+		}
+
+		&--3 {
+			left: 60%;
+		}
+
+		&--4 {
+			left: 80%;
+		}
+	}
+}

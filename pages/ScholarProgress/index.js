@@ -1,5 +1,7 @@
 import Head from 'next/head'
-import { Header } from '../../components'
+import { Header, Footer, ScholarCard } from '../../components'
+import { DATA } from './data'
+import React from 'react'
 
 const ScholarProgress = () => {
 	return (
@@ -12,10 +14,13 @@ const ScholarProgress = () => {
 				/>
 				<link rel='icon' href='/favicon.png' />
 			</Head>
-			<Header />
+			<Header buttonText='$directEd' />
 			<main>
 				<h1>Scholar's Progress</h1>
+				<h2>Progress Track for Kagumo High School</h2>
+				<ScholarCard data={DATA} />
 			</main>
+			<Footer />
 		</>
 	)
 }

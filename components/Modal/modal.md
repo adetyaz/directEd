@@ -1,0 +1,6 @@
+```
+<Modal>
+   <Dialog />
+</Modal>
+
+```

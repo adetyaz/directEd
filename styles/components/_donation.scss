@@ -1,4 +1,5 @@
 .donation {
+	padding-inline: 2rem;
 	&__head {
 		@include flex;
 		gap: 20rem;
@@ -6,7 +7,8 @@
 		padding-inline: 4rem;
 
 		@media screen and (max-width: 600px) {
-			gap: 5rem;
+			gap: 2rem;
+			padding-inline: 0;
 		}
 	}
 
@@ -20,5 +22,50 @@
 		gap: 3rem;
 		justify-content: center;
 		margin: 6rem 0;
+	}
+
+	&__form {
+		@include flex;
+		justify-content: center;
+		gap: 2rem;
+		margin: 3rem 0;
+	}
+
+	&__gifts {
+		width: 41%;
+		display: block;
+		margin-inline: auto;
+
+		@media screen and (max-width: 900px) {
+			width: 65%;
+		}
+
+		@media screen and (max-width: 600px) {
+			width: 100%;
+		}
+
+		& > p {
+			font-size: var(--fs-medium);
+			margin-bottom: 1rem;
+		}
+
+		&--image-text {
+			font-size: var(--fs-small);
+			text-align: center;
+			margin: 2rem 0;
+		}
+
+		&--image {
+			display: block;
+			margin-inline: auto;
+		}
+
+		&--image-large {
+			width: 30%;
+
+			@media screen and (max-width: 600px) {
+				width: 50%;
+			}
+		}
 	}
 }

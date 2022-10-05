@@ -1,4 +1,4 @@
-@import './abstracts/mixins';
+@import './mixins';
 @import './base/base';
 @import './components/button';
 @import './components/card';
@@ -8,3 +8,6 @@
 @import './components/footer';
 @import './components/donation';
 @import './components/dropdown';
+@import './components/modal';
+@import './components/dialog';
+@import './components/input';

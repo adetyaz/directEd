@@ -4,6 +4,11 @@
 	color: var(--color-primary);
 	padding: 1rem 3rem;
 	transition: all 0.5s ease-in;
+	position: relative;
+
+	@media screen and (max-width: 800px) {
+		padding: 1rem 2rem;
+	}
 
 	&:hover {
 		transform: translateY(-5px);
@@ -36,6 +41,8 @@
 	background: var(--color-grey);
 	padding: 1.5rem 3rem;
 	color: #949494;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
 	&.active {
 		background-color: var(--color-primary);

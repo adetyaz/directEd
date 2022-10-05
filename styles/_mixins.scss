@@ -21,8 +21,18 @@
 }
 
 @mixin banner {
-	background: url('../../public/assets/safari.png') no-repeat center;
+	background: url('../public/assets/safari.png') no-repeat center;
 	background-size: cover;
 	height: 30vh;
 	margin-top: -3rem;
+}
+
+@mixin cardBorder {
+	border-radius: 1rem;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+@mixin borderTop {
+	border-top: 1.5px solid var(--color-white);
 }

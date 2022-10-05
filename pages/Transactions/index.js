@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { Header, Footer } from '../../components'
+import { Header } from '../../components'
+import React from 'react'
 
 const Transactions = () => {
 	return (

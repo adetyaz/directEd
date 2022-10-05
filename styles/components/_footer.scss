@@ -12,6 +12,13 @@
 
 	@media screen and (max-width: 600px) {
 		padding: 2rem 3rem 2rem 3rem;
+		align-items: flex-start;
+	}
+
+	& > button {
+		@media screen and (max-width: 600px) {
+			margin-bottom: 1rem;
+		}
 	}
 
 	&__copyright {

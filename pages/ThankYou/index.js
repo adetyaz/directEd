@@ -1,6 +1,8 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { Header } from '../../components'
 import Button from '../../components/Button'
+import React from 'react'
 
 const ThankYou = () => {
 	return (
@@ -21,7 +23,9 @@ const ThankYou = () => {
 						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 						aliquip ex ea commodo consequat.
 					</p>
-					<Button centered>View Progress</Button>
+					<Link href='/scholarprogress'>
+						<Button centered>View Progress</Button>
+					</Link>
 				</div>
 			</main>
 		</>

@@ -2,10 +2,18 @@
 	&__items {
 		@include flex;
 		gap: 3rem;
+		@media screen and (max-width: 800px) {
+			gap: 2rem;
+		}
+
+		@media screen and (max-width: 600px) {
+			display: none;
+		}
 	}
 
 	&__list {
 		list-style: none;
+		position: relative;
 	}
 
 	&__link {
@@ -15,6 +23,10 @@
 		transition: all 1s ease-out;
 		cursor: pointer;
 		display: block;
+
+		@media screen and (max-width: 800px) {
+			font-size: var(--fs-small);
+		}
 
 		&.active {
 			text-decoration: underline;

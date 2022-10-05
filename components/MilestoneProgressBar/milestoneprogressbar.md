@@ -1,0 +1,4 @@
+```
+<MilestoneProgressBar progressLevel={50} />
+
+```

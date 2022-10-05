@@ -14,6 +14,11 @@
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
 		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
+	@media screen and (max-width: 600px) {
+		margin-bottom: 2rem;
+		width: 82%;
+	}
+
 	&__image {
 		width: 100%;
 	}
@@ -57,14 +62,17 @@
 
 .confirmation-card {
 	background: var(--color-accent);
-	border-radius: 1rem;
+
 	padding: 2rem;
 	width: 45%;
 	margin: 5rem 0;
 	display: block;
 	margin-inline: auto;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	@include cardBorder;
+
+	@media screen and (max-width: 600px) {
+		width: 88%;
+	}
 
 	&__items {
 		@include flex;
@@ -89,9 +97,10 @@
 	width: 35%;
 	display: block;
 	margin-inline: auto;
-	border-radius: 1rem;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+	@media screen and (max-width: 600px) {
+		width: 88%;
+	}
 
 	h2 {
 		font-size: 2.5rem;
@@ -101,5 +110,82 @@
 		font-size: 1.5rem;
 		margin-bottom: 2rem;
 		text-align: center;
+	}
+}
+
+.scholar-card {
+	width: 65%;
+	background: var(--color-accent);
+	margin-inline: auto;
+	padding: 2rem 0;
+	color: var(--color-grey-3);
+	@include cardBorder;
+
+	@media screen and (max-width: 600px) {
+		width: 90%;
+	}
+
+	&__head {
+		@include flex;
+		justify-content: space-between;
+		padding-inline: 10rem 6rem;
+		font-size: var(--fs-medium);
+		font-weight: 500;
+	}
+
+	&__student {
+		@include borderTop;
+		padding: 1rem 5rem;
+		font-size: var(--fs-medium);
+		@include flex;
+		justify-content: space-between;
+
+		&--info {
+			flex-basis: 30%;
+		}
+
+		> div {
+			@include flex;
+			gap: 1.5rem;
+		}
+
+		> a {
+			font-weight: 600;
+		}
+	}
+
+	&__student-details {
+		padding-top: 2rem;
+		padding-inline: 10rem 5rem;
+		font-size: var(--fs-medium);
+
+		> div {
+			@include flex;
+			gap: 1rem;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__student-links {
+		@include flex;
+		justify-content: space-between;
+		margin-top: 3rem;
+
+		> div {
+			@include flex;
+			gap: 1rem;
+		}
+	}
+
+	&__image {
+		width: 20%;
+	}
+
+	&__toggle {
+		cursor: pointer;
+	}
+
+	&__milestone {
+		flex-basis: 40%;
 	}
 }

@@ -1,3 +1,4 @@
+import React from 'react'
 import ClockIcon from '../../icons/ClockIcon'
 
 const ProgressBar = ({ time, amount, amountLeft, people, progressLevel }) => {

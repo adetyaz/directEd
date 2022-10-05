@@ -19,6 +19,7 @@ On the Confirmation page when the button is clicked, it should change from Confi
 ## User Stories
 
 - As a user I can see a scholarship pool page.
+- As a user I see a popup modal.
 - As a user I can click on logo.
 - As a user I can click on navigation links.
 - As a user I can see a dropdown when Create wallet button is clicked.
@@ -29,11 +30,19 @@ On the Confirmation page when the button is clicked, it should change from Confi
 - As a user I can click donate button and I go to donation.
 - As a user I can see donation page.
 - As a user I can select an amount.
+- As a user I can , click custom button.
+- As a user when I click custom button, a form appears.
+- As a user when I select amount, I can see a gift and donation reports.
+- As a user I can click on gift and it'll expand.
 - As a user I can click the donate button and I go confirmation page.
 - As a user I can see the confirmation page.
 - As a user I can click on the confirm button and I see the button changes to processing.
 - As a user I can click the processing button and I go to thank you page
 - As a user I see the thank you page
+- As a user, I can click on the view progress button.
+- As a user I go to scholar progress page.
+- As a user, I see a list of students and their progress levels.
+  -As a user when I click more, I can see more if the student details
 
 ## Getting Started
 
@@ -46,3 +55,15 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Document the App components
+
+To ensure documentation of the App components to allow developers to know how they work, allowing scalability and maintainability.
+
+React Styleguidist has been setup with the project to document the components.
+
+To run the documentation, use
+
+```
+npx styleguidist server
+```
